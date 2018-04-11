@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_margin"
+    tools:context=".EditorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/book_name" />
+
+        <EditText
+            android:id="@+id/edit_book_name"
+            style="@style/EditorFieldStyle"
+            android:hint="@string/book_name_hint"
+            android:inputType="textCapWords" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/book_price" />
+
+        <EditText
+            android:id="@+id/edit_book_price"
+            style="@style/EditorFieldStyle"
+            android:hint="@string/book_price_hint"
+            android:inputType="numberDecimal" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/quantity_label"
+            style="@style/QuantityCategoryStyle"
+            android:text="@string/book_quantity" />
+
+        <Button
+            android:id="@+id/decrement_button"
+            style="@style/EditorButtonStyle"
+            android:layout_toRightOf="@id/quantity_label"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/edit_book_quantity"
+            style="@style/QuantityFieldStyle"
+            android:layout_toRightOf="@id/decrement_button"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/increment_button"
+            style="@style/EditorButtonStyle"
+            android:layout_toRightOf="@id/edit_book_quantity"
+            android:text="+" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/supplier_name" />
+
+        <EditText
+            android:id="@+id/edit_supplier_name"
+            style="@style/EditorFieldStyle"
+            android:hint="@string/book_supplier_name_hint"
+            android:inputType="textCapWords" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/PhoneCategoryStyle"
+            android:text="@string/supplier_phone" />
+
+        <EditText
+            android:id="@+id/edit_supplier_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:fontFamily="sans-serif-light"
+            android:hint="@string/book_supplier_phone_hint"
+            android:inputType="phone"
+            android:textAppearance="?android:textAppearanceMedium" />
+
+        <ImageButton
+            android:id="@+id/phone_button"
+            style="@style/EditorButtonStyle"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_call_black_24dp" />
+    </LinearLayout>
+
+</LinearLayout>
+
+
